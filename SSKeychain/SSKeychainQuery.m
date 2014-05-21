@@ -44,7 +44,7 @@
     }
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
     if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
-        [query setObject:(__bridge id)kSecAttrAccessibleAlways forKey:(__bridge id)kSecAttrAccessible];
+        [query setObject:(__bridge id)kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly forKey:(__bridge id)kSecAttrAccessible];
     } else {
         CFTypeRef accessibilityType = [SSKeychain accessibilityType];
         if (accessibilityType) {
